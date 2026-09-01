@@ -3,43 +3,64 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Élégance Beauté | Beauté & Soins</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <meta
         name="description"
-        content="Élégance Beauté - Découvrez notre sélection de produits beauté et soins. Commandez facilement sur WhatsApp."
+        content="Élégance Beauté - Découvrez notre sélection de produits de beauté et de soins."
     >
+
+    <title>Élégance Beauté</title>
+
+    <!-- ================= POLICES ================= -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet"
     >
 
+    <!-- ================= FONT AWESOME ================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- ================= CSS ================= -->
+
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
 
-    <!-- =========================
-         HEADER
-    ========================== -->
+    <!-- ==================================================
+                         HEADER
+    ================================================== -->
 
     <header class="header">
 
-        <div class="container nav">
+        <div class="container nav-container">
+
+            <!-- LOGO -->
 
             <a href="#accueil" class="logo">
-                <span>Élégance</span>
-                <strong>Beauté</strong>
+                Élégance <span>Beauté</span>
             </a>
 
-            <nav class="navigation" id="navigation">
+
+            <!-- NAVIGATION -->
+
+            <nav class="nav" id="nav">
 
                 <a href="#accueil">
                     Accueil
@@ -61,25 +82,61 @@
                     Contact
                 </a>
 
+
+                <!-- PANIER -->
+
+                <button
+                    type="button"
+                    class="cart-button"
+                    id="openCart"
+                    aria-label="Ouvrir le panier"
+                >
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <span>
+                        Panier
+                    </span>
+
+                    <span
+                        class="cart-count"
+                        id="cartCount"
+                    >
+                        0
+                    </span>
+
+                </button>
+
+
+                <!-- WHATSAPP -->
+
+                <a
+                    href="https://wa.me/22390371793"
+                    class="nav-whatsapp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    Commander
+
+                </a>
+
             </nav>
 
-            <a
-                href="https://wa.me/22390371793"
-                target="_blank"
-                class="header-order"
-            >
-                Commander
-            </a>
+
+            <!-- MENU MOBILE -->
 
             <button
-                class="menu-button"
-                id="menuButton"
                 type="button"
+                class="menu-toggle"
+                id="menuToggle"
                 aria-label="Ouvrir le menu"
             >
-                <span></span>
-                <span></span>
-                <span></span>
+
+                <i class="fa-solid fa-bars"></i>
+
             </button>
 
         </div>
@@ -88,106 +145,126 @@
 
 
 
-    <!-- =========================
-         MAIN
-    ========================== -->
+    <!-- ==================================================
+                           CONTENU
+    ================================================== -->
 
     <main>
 
 
-        <!-- =========================
-             HERO
-        ========================== -->
+        <!-- ==================================================
+                              HERO
+        ================================================== -->
 
-        <section class="hero" id="accueil">
+        <section
+            class="hero"
+            id="accueil"
+        >
 
-            <div class="hero-decoration hero-decoration-one"></div>
-            <div class="hero-decoration hero-decoration-two"></div>
+            <div class="container hero-content">
 
-            <div class="container hero-grid">
 
-                <div class="hero-content">
+                <!-- TEXTE HERO -->
 
-                    <p class="eyebrow">
-                        BEAUTÉ • SOINS • ÉLÉGANCE
-                    </p>
+                <div class="hero-text">
+
+                    <span class="hero-small-title">
+                        ✨ Votre beauté, notre passion
+                    </span>
+
 
                     <h1>
-                        Votre beauté,
-                        <em>notre passion.</em>
+
+                        Révélez votre
+
+                        <span>
+                            Élégance
+                        </span>
+
                     </h1>
 
-                    <p class="hero-description">
+
+                    <p>
+
                         Découvrez une sélection de produits de beauté
-                        soigneusement choisis pour prendre soin de votre
-                        peau et révéler votre éclat au quotidien.
+                        soigneusement choisis pour prendre soin de votre peau
+                        et révéler votre éclat naturel.
+
                     </p>
 
-                    <div class="hero-actions">
+
+                    <div class="hero-buttons">
+
 
                         <a
                             href="#produits"
-                            class="button button-primary"
+                            class="btn-primary"
                         >
-                            Découvrir les produits
+
+                            Découvrir nos produits
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
                         </a>
+
 
                         <a
                             href="https://wa.me/22390371793"
+                            class="btn-whatsapp"
                             target="_blank"
-                            class="button button-light"
+                            rel="noopener noreferrer"
                         >
+
+                            <i class="fa-brands fa-whatsapp"></i>
+
                             Nous contacter
+
                         </a>
 
-                    </div>
 
-                    <div class="hero-note">
-                        <span></span>
-                        Des produits sélectionnés avec soin
                     </div>
 
                 </div>
 
 
-                <div class="hero-visual">
 
-                    <div class="hero-circle"></div>
+                <!-- IMAGES HERO -->
 
-                    <div class="hero-image-main">
+                <div class="hero-images">
+
+
+                    <div class="hero-main-image">
 
                         <img
                             src="images/produit1.jpeg"
-                            alt="Medicube Collagen Night Wrapping Mask"
+                            alt="Produit de beauté Élégance Beauté"
                         >
 
                     </div>
+
 
                     <div class="hero-small-card">
 
                         <img
                             src="images/produit2.jpeg"
-                            alt="Garnier Vitamin C+ Sérum Éclat Anti-Taches"
+                            alt="Produit de beauté"
                         >
+
 
                         <div>
 
                             <strong>
-                                Élégance Beauté
+                                Beauté & Éclat
                             </strong>
 
                             <span>
-                                Beauté & soins
+                                Des soins sélectionnés avec soin
                             </span>
 
                         </div>
 
                     </div>
 
-                    <div class="hero-flower">
-                        ✿
-                    </div>
-
                 </div>
 
             </div>
@@ -196,71 +273,89 @@
 
 
 
-        <!-- =========================
-             AVANTAGES
-        ========================== -->
+        <!-- ==================================================
+                           AVANTAGES
+        ================================================== -->
 
         <section class="advantages">
 
             <div class="container advantages-grid">
 
-                <div class="advantage">
+
+                <!-- AVANTAGE 1 -->
+
+                <div class="advantage-card">
 
                     <div class="advantage-icon">
-                        ♡
+
+                        <i class="fa-solid fa-gem"></i>
+
                     </div>
+
 
                     <div>
 
-                        <strong>
+                        <h3>
                             Qualité
-                        </strong>
+                        </h3>
 
-                        <span>
-                            Des produits soigneusement sélectionnés
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="advantage">
-
-                    <div class="advantage-icon">
-                        ✦
-                    </div>
-
-                    <div>
-
-                        <strong>
-                            Élégance
-                        </strong>
-
-                        <span>
-                            Une sélection pensée pour vous
-                        </span>
+                        <p>
+                            Des produits soigneusement sélectionnés.
+                        </p>
 
                     </div>
 
                 </div>
 
 
-                <div class="advantage">
+
+                <!-- AVANTAGE 2 -->
+
+                <div class="advantage-card">
 
                     <div class="advantage-icon">
-                        ✓
+
+                        <i class="fa-solid fa-heart"></i>
+
                     </div>
+
 
                     <div>
 
-                        <strong>
+                        <h3>
+                            Avec amour
+                        </h3>
+
+                        <p>
+                            Votre satisfaction est notre priorité.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- AVANTAGE 3 -->
+
+                <div class="advantage-card">
+
+                    <div class="advantage-icon">
+
+                        <i class="fa-solid fa-truck-fast"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
                             Commande facile
-                        </strong>
+                        </h3>
 
-                        <span>
-                            Commandez directement sur WhatsApp
-                        </span>
+                        <p>
+                            Commandez simplement via WhatsApp.
+                        </p>
 
                     </div>
 
@@ -272,9 +367,9 @@
 
 
 
-        <!-- =========================
-             PRODUITS
-        ========================== -->
+        <!-- ==================================================
+                           PRODUITS
+        ================================================== -->
 
         <section
             class="products-section"
@@ -283,35 +378,51 @@
 
             <div class="container">
 
+
+                <!-- TITRE -->
+
                 <div class="section-heading">
 
-                    <p class="section-tag">
-                        NOTRE COLLECTION
-                    </p>
+                    <span>
+                        Notre sélection
+                    </span>
+
 
                     <h2>
+
                         Découvrez nos
-                        <em>produits</em>
+
+                        <strong>
+                            produits
+                        </strong>
+
                     </h2>
 
-                    <div class="heading-line"></div>
 
                     <p>
-                        Retrouvez notre sélection de soins et produits
-                        beauté disponibles à la commande.
+                        Prenez soin de vous avec notre sélection de soins
+                        beauté.
                     </p>
 
                 </div>
 
 
+
+                <!-- GRILLE PRODUITS -->
+
                 <div class="products-grid">
 
 
-                    <!-- =========================
-                         PRODUIT 1
-                    ========================== -->
+                    <!-- ==================================================
+                              PRODUIT 1
+                    ================================================== -->
 
-                    <article class="product-card">
+                    <article
+                        class="product-card"
+                        data-product-id="1"
+                        data-name="Medicube Collagen Night Wrapping Mask"
+                        data-price="6000"
+                    >
 
                         <div class="product-image">
 
@@ -320,42 +431,65 @@
                                 alt="Medicube Collagen Night Wrapping Mask"
                             >
 
-                            <span class="product-badge">
+                            <span class="product-number">
                                 01
                             </span>
 
                         </div>
 
-                        <div class="product-content">
+
+                        <div class="product-info">
 
                             <span class="product-category">
-                                SOIN DE NUIT
+                                Soin du visage
                             </span>
+
 
                             <h3>
                                 Medicube Collagen Night Wrapping Mask
                             </h3>
 
+
                             <p>
-                                Masque de nuit au collagène avec extrait
-                                de collagène, niacinamide et céramide NP.
+                                Masque de nuit au collagène pour prendre soin
+                                de votre peau.
                             </p>
 
-                            <div class="product-footer">
 
-                                <strong>
+                            <div class="product-bottom">
+
+                                <strong class="price">
                                     6 000 FCFA
                                 </strong>
 
-                                <a
-                                    href="https://wa.me/22390371793?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20le%20Medicube%20Collagen%20Night%20Wrapping%20Mask%20%C3%A0%206000%20FCFA."
-                                    target="_blank"
+
+                                <button
+                                    type="button"
+                                    class="add-cart"
+                                    data-id="1"
                                 >
-                                    Commander
-                                    <span>→</span>
-                                </a>
+
+                                    <i class="fa-solid fa-cart-plus"></i>
+
+                                    Ajouter
+
+                                </button>
 
                             </div>
+
+
+                            <a
+                                href="https://wa.me/22390371793?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20le%20Medicube%20Collagen%20Night%20Wrapping%20Mask%20%C3%A0%206%20000%20FCFA."
+                                class="product-whatsapp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+
+                                <i class="fa-brands fa-whatsapp"></i>
+
+                                Commander directement
+
+                            </a>
 
                         </div>
 
@@ -363,11 +497,16 @@
 
 
 
-                    <!-- =========================
-                         PRODUIT 2
-                    ========================== -->
+                    <!-- ==================================================
+                              PRODUIT 2
+                    ================================================== -->
 
-                    <article class="product-card">
+                    <article
+                        class="product-card"
+                        data-product-id="2"
+                        data-name="Garnier Vitamin C+ Sérum Éclat Anti-Taches"
+                        data-price="13000"
+                    >
 
                         <div class="product-image">
 
@@ -376,42 +515,65 @@
                                 alt="Garnier Vitamin C+ Sérum Éclat Anti-Taches"
                             >
 
-                            <span class="product-badge">
+                            <span class="product-number">
                                 02
                             </span>
 
                         </div>
 
-                        <div class="product-content">
+
+                        <div class="product-info">
 
                             <span class="product-category">
-                                SÉRUM
+                                Sérum
                             </span>
+
 
                             <h3>
                                 Garnier Vitamin C+ Sérum Éclat Anti-Taches
                             </h3>
 
+
                             <p>
-                                Sérum éclat à la vitamine C, niacinamide
-                                et acide salicylique.
+                                Un soin à la vitamine C pour une peau
+                                visiblement plus éclatante.
                             </p>
 
-                            <div class="product-footer">
 
-                                <strong>
+                            <div class="product-bottom">
+
+                                <strong class="price">
                                     13 000 FCFA
                                 </strong>
 
-                                <a
-                                    href="https://wa.me/22390371793?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20le%20Garnier%20Vitamin%20C%2B%20S%C3%A9rum%20%C3%89clat%20Anti-Taches%20%C3%A0%2013000%20FCFA."
-                                    target="_blank"
+
+                                <button
+                                    type="button"
+                                    class="add-cart"
+                                    data-id="2"
                                 >
-                                    Commander
-                                    <span>→</span>
-                                </a>
+
+                                    <i class="fa-solid fa-cart-plus"></i>
+
+                                    Ajouter
+
+                                </button>
 
                             </div>
+
+
+                            <a
+                                href="https://wa.me/22390371793?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20le%20Garnier%20Vitamin%20C%2B%20S%C3%A9rum%20%C3%89clat%20Anti-Taches%20%C3%A0%2013%20000%20FCFA."
+                                class="product-whatsapp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+
+                                <i class="fa-brands fa-whatsapp"></i>
+
+                                Commander directement
+
+                            </a>
 
                         </div>
 
@@ -419,11 +581,16 @@
 
 
 
-                    <!-- =========================
-                         PRODUIT 3
-                    ========================== -->
+                    <!-- ==================================================
+                              PRODUIT 3
+                    ================================================== -->
 
-                    <article class="product-card">
+                    <article
+                        class="product-card"
+                        data-product-id="3"
+                        data-name="Nourishing Serum Snail"
+                        data-price="2500"
+                    >
 
                         <div class="product-image">
 
@@ -432,42 +599,65 @@
                                 alt="Nourishing Serum Snail"
                             >
 
-                            <span class="product-badge">
+                            <span class="product-number">
                                 03
                             </span>
 
                         </div>
 
-                        <div class="product-content">
+
+                        <div class="product-info">
 
                             <span class="product-category">
-                                SÉRUM
+                                Sérum
                             </span>
+
 
                             <h3>
                                 Nourishing Serum Snail
                             </h3>
 
+
                             <p>
-                                Sérum visage à la sécrétion d'escargot
-                                et à l'acide hyaluronique.
+                                Sérum à la mucine d'escargot et à l'acide
+                                hyaluronique.
                             </p>
 
-                            <div class="product-footer">
 
-                                <strong>
+                            <div class="product-bottom">
+
+                                <strong class="price">
                                     2 500 FCFA
                                 </strong>
 
-                                <a
-                                    href="https://wa.me/22390371793?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20le%20Nourishing%20Serum%20Snail%20%28Snail%20Secretion%20Filtrate%20Hyaluronic%20Acid%29%20%C3%A0%202500%20FCFA."
-                                    target="_blank"
+
+                                <button
+                                    type="button"
+                                    class="add-cart"
+                                    data-id="3"
                                 >
-                                    Commander
-                                    <span>→</span>
-                                </a>
+
+                                    <i class="fa-solid fa-cart-plus"></i>
+
+                                    Ajouter
+
+                                </button>
 
                             </div>
+
+
+                            <a
+                                href="https://wa.me/22390371793?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20le%20Nourishing%20Serum%20Snail%20%C3%A0%202%20500%20FCFA."
+                                class="product-whatsapp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+
+                                <i class="fa-brands fa-whatsapp"></i>
+
+                                Commander directement
+
+                            </a>
 
                         </div>
 
@@ -475,55 +665,83 @@
 
 
 
-                    <!-- =========================
-                         PRODUIT 4
-                    ========================== -->
+                    <!-- ==================================================
+                              PRODUIT 4
+                    ================================================== -->
 
-                    <article class="product-card">
+                    <article
+                        class="product-card"
+                        data-product-id="4"
+                        data-name="Medix Vitamin C + Turmeric Brighten + Firm Body Cream"
+                        data-price="20000"
+                    >
 
                         <div class="product-image">
 
                             <img
                                 src="images/produit4.jpeg"
-                                alt="Medix Vitamin C + Turmeric Brighten + Firm Body Cream"
+                                alt="Medix Vitamin C Turmeric Body Cream"
                             >
 
-                            <span class="product-badge">
+                            <span class="product-number">
                                 04
                             </span>
 
                         </div>
 
-                        <div class="product-content">
+
+                        <div class="product-info">
 
                             <span class="product-category">
-                                CORPS
+                                Soin du corps
                             </span>
 
+
                             <h3>
-                                Medix Vitamin C + Turmeric Brighten + Firm Body Cream
+                                Medix Vitamin C + Turmeric Body Cream
                             </h3>
 
+
                             <p>
-                                Crème pour le corps à la vitamine C et
-                                au curcuma.
+                                Crème pour le corps à la vitamine C et au
+                                curcuma.
                             </p>
 
-                            <div class="product-footer">
 
-                                <strong>
+                            <div class="product-bottom">
+
+                                <strong class="price">
                                     20 000 FCFA
                                 </strong>
 
-                                <a
-                                    href="https://wa.me/22390371793?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20le%20Medix%20Vitamin%20C%20%2B%20Turmeric%20Brighten%20%2B%20Firm%20Body%20Cream%20%C3%A0%2020000%20FCFA."
-                                    target="_blank"
+
+                                <button
+                                    type="button"
+                                    class="add-cart"
+                                    data-id="4"
                                 >
-                                    Commander
-                                    <span>→</span>
-                                </a>
+
+                                    <i class="fa-solid fa-cart-plus"></i>
+
+                                    Ajouter
+
+                                </button>
 
                             </div>
+
+
+                            <a
+                                href="https://wa.me/22390371793?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20le%20Medix%20Vitamin%20C%20%2B%20Turmeric%20Body%20Cream%20%C3%A0%2020%20000%20FCFA."
+                                class="product-whatsapp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+
+                                <i class="fa-brands fa-whatsapp"></i>
+
+                                Commander directement
+
+                            </a>
 
                         </div>
 
@@ -531,11 +749,16 @@
 
 
 
-                    <!-- =========================
-                         PRODUIT 5
-                    ========================== -->
+                    <!-- ==================================================
+                              PRODUIT 5
+                    ================================================== -->
 
-                    <article class="product-card">
+                    <article
+                        class="product-card"
+                        data-product-id="5"
+                        data-name="La Roche-Posay Pure Vitamin C12 Serum"
+                        data-price="25000"
+                    >
 
                         <div class="product-image">
 
@@ -544,42 +767,65 @@
                                 alt="La Roche-Posay Pure Vitamin C12 Serum"
                             >
 
-                            <span class="product-badge">
+                            <span class="product-number">
                                 05
                             </span>
 
                         </div>
 
-                        <div class="product-content">
+
+                        <div class="product-info">
 
                             <span class="product-category">
-                                SÉRUM
+                                Sérum
                             </span>
+
 
                             <h3>
                                 La Roche-Posay Pure Vitamin C12 Serum
                             </h3>
 
+
                             <p>
-                                Sérum à la vitamine C pure, conçu pour
-                                améliorer l'éclat et l'apparence de la peau.
+                                Sérum à la vitamine C pour une peau plus
+                                lumineuse.
                             </p>
 
-                            <div class="product-footer">
 
-                                <strong>
+                            <div class="product-bottom">
+
+                                <strong class="price">
                                     25 000 FCFA
                                 </strong>
 
-                                <a
-                                    href="https://wa.me/22390371793?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20le%20La%20Roche-Posay%20Pure%20Vitamin%20C12%20Serum%20%C3%A0%2025000%20FCFA."
-                                    target="_blank"
+
+                                <button
+                                    type="button"
+                                    class="add-cart"
+                                    data-id="5"
                                 >
-                                    Commander
-                                    <span>→</span>
-                                </a>
+
+                                    <i class="fa-solid fa-cart-plus"></i>
+
+                                    Ajouter
+
+                                </button>
 
                             </div>
+
+
+                            <a
+                                href="https://wa.me/22390371793?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20le%20La%20Roche-Posay%20Pure%20Vitamin%20C12%20Serum%20%C3%A0%2025%20000%20FCFA."
+                                class="product-whatsapp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+
+                                <i class="fa-brands fa-whatsapp"></i>
+
+                                Commander directement
+
+                            </a>
 
                         </div>
 
@@ -587,11 +833,16 @@
 
 
 
-                    <!-- =========================
-                         PRODUIT 6
-                    ========================== -->
+                    <!-- ==================================================
+                              PRODUIT 6
+                    ================================================== -->
 
-                    <article class="product-card">
+                    <article
+                        class="product-card"
+                        data-product-id="6"
+                        data-name="Mixa Crème Cica Réparation"
+                        data-price="12000"
+                    >
 
                         <div class="product-image">
 
@@ -600,42 +851,65 @@
                                 alt="Mixa Crème Cica Réparation"
                             >
 
-                            <span class="product-badge">
+                            <span class="product-number">
                                 06
                             </span>
 
                         </div>
 
-                        <div class="product-content">
+
+                        <div class="product-info">
 
                             <span class="product-category">
-                                HYDRATATION
+                                Soin du corps
                             </span>
+
 
                             <h3>
                                 Mixa Crème Cica Réparation
                             </h3>
 
+
                             <p>
-                                Crème réparatrice lissante avec 10% d'urée
-                                et niacinamide.
+                                Crème réparatrice avec 10% d'urée et
+                                niacinamide.
                             </p>
 
-                            <div class="product-footer">
 
-                                <strong>
+                            <div class="product-bottom">
+
+                                <strong class="price">
                                     12 000 FCFA
                                 </strong>
 
-                                <a
-                                    href="https://wa.me/22390371793?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20Mixa%20Cr%C3%A8me%20Cica%20R%C3%A9paration%20%2810%25%20Ur%C3%A9e%20%26%20Niacinamide%29%20%C3%A0%2012000%20FCFA."
-                                    target="_blank"
+
+                                <button
+                                    type="button"
+                                    class="add-cart"
+                                    data-id="6"
                                 >
-                                    Commander
-                                    <span>→</span>
-                                </a>
+
+                                    <i class="fa-solid fa-cart-plus"></i>
+
+                                    Ajouter
+
+                                </button>
 
                             </div>
+
+
+                            <a
+                                href="https://wa.me/22390371793?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20la%20Mixa%20Cr%C3%A8me%20Cica%20R%C3%A9paration%20%C3%A0%2012%20000%20FCFA."
+                                class="product-whatsapp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+
+                                <i class="fa-brands fa-whatsapp"></i>
+
+                                Commander directement
+
+                            </a>
 
                         </div>
 
@@ -643,55 +917,83 @@
 
 
 
-                    <!-- =========================
-                         PRODUIT 8
-                    ========================== -->
+                    <!-- ==================================================
+                              PRODUIT 8
+                    ================================================== -->
 
-                    <article class="product-card">
+                    <article
+                        class="product-card"
+                        data-product-id="8"
+                        data-name="Anua Niacinamide 10 + TXA 4 Serum"
+                        data-price="20000"
+                    >
 
                         <div class="product-image">
 
                             <img
                                 src="images/produit8.jpeg"
-                                alt="ACM Azéane Acide Azélaïque 15%"
+                                alt="Anua Niacinamide 10 TXA 4 Serum"
                             >
 
-                            <span class="product-badge">
+                            <span class="product-number">
                                 08
                             </span>
 
                         </div>
 
-                        <div class="product-content">
+
+                        <div class="product-info">
 
                             <span class="product-category">
-                                SÉRUM
+                                Sérum
                             </span>
 
+
                             <h3>
-                               ACM Azéane – Acide Azélaïque 15% 
+                                Anua Niacinamide 10 + TXA 4 Serum
                             </h3>
 
+
                             <p>
-                                Sérum à la niacinamide 10% et au TXA 4%,
-                                en format 30 ml.
+                                Sérum associant niacinamide et TXA pour le
+                                soin de la peau.
                             </p>
 
-                            <div class="product-footer">
 
-                                <strong>
+                            <div class="product-bottom">
+
+                                <strong class="price">
                                     20 000 FCFA
                                 </strong>
 
-                                <a
-                                    href="https://wa.me/22390371793?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20le%20ACM%20Az%C3%A9ane%20-%20Acide%20Az%C3%A9la%C3%AFque%2015%25%20%C3%A0%2015000%20FCFA."
-                                    target="_blank"
+
+                                <button
+                                    type="button"
+                                    class="add-cart"
+                                    data-id="8"
                                 >
-                                    Commander
-                                    <span>→</span>
-                                </a>
+
+                                    <i class="fa-solid fa-cart-plus"></i>
+
+                                    Ajouter
+
+                                </button>
 
                             </div>
+
+
+                            <a
+                                href="https://wa.me/22390371793?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20le%20Anua%20Niacinamide%2010%20%2B%20TXA%204%20Serum%20%C3%A0%2020%20000%20FCFA."
+                                class="product-whatsapp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+
+                                <i class="fa-brands fa-whatsapp"></i>
+
+                                Commander directement
+
+                            </a>
 
                         </div>
 
@@ -699,55 +1001,82 @@
 
 
 
-                    <!-- =========================
-                         PRODUIT 9
-                    ========================== -->
+                    <!-- ==================================================
+                              PRODUIT 9
+                    ================================================== -->
 
-                    <article class="product-card">
+                    <article
+                        class="product-card"
+                        data-product-id="9"
+                        data-name="ACM Azéane - Acide Azélaïque 15%"
+                        data-price="15000"
+                    >
 
                         <div class="product-image">
 
                             <img
                                 src="images/produit9.jpeg"
-                                alt="Anua Niacinamide 10 + TXA 4 Serum"
+                                alt="ACM Azéane Acide Azélaïque 15%"
                             >
 
-                            <span class="product-badge">
+                            <span class="product-number">
                                 09
                             </span>
 
                         </div>
 
-                        <div class="product-content">
+
+                        <div class="product-info">
 
                             <span class="product-category">
-                                SOIN VISAGE
+                                Soin du visage
                             </span>
 
+
                             <h3>
-                                Anua Niacinamide 10 + TXA 4 Serum
+                                ACM Azéane – Acide Azélaïque 15%
                             </h3>
 
+
                             <p>
-                                Soin à l'acide azélaïque destiné aux
-                                peaux sujettes aux imperfections.
+                                Soin contenant 15% d'acide azélaïque.
                             </p>
 
-                            <div class="product-footer">
 
-                                <strong>
+                            <div class="product-bottom">
+
+                                <strong class="price">
                                     15 000 FCFA
                                 </strong>
 
-                                <a
-                                    href="https://wa.me/22390371793?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20le%20Anua%20Niacinamide%2010%20%2B%20TXA%204%20Serum%20%C3%A0%2020000%20FCFA."
-                                    target="_blank"
+
+                                <button
+                                    type="button"
+                                    class="add-cart"
+                                    data-id="9"
                                 >
-                                    Commander
-                                    <span>→</span>
-                                </a>
+
+                                    <i class="fa-solid fa-cart-plus"></i>
+
+                                    Ajouter
+
+                                </button>
 
                             </div>
+
+
+                            <a
+                                href="https://wa.me/22390371793?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20le%20ACM%20Az%C3%A9ane%20Acide%20Az%C3%A9la%C3%AFque%2015%25%20%C3%A0%2015%20000%20FCFA."
+                                class="product-whatsapp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+
+                                <i class="fa-brands fa-whatsapp"></i>
+
+                                Commander directement
+
+                            </a>
 
                         </div>
 
@@ -762,9 +1091,9 @@
 
 
 
-        <!-- =========================
-             À PROPOS
-        ========================== -->
+        <!-- ==================================================
+                            À PROPOS
+        ================================================== -->
 
         <section
             class="about-section"
@@ -773,95 +1102,61 @@
 
             <div class="container about-grid">
 
-                <div class="about-images">
 
-                    <div class="about-image-main">
+                <div class="about-image">
 
-                        <img
-                            src="images/produit3.jpeg"
-                            alt="Nourishing Serum Snail"
-                        >
-
-                    </div>
-
-                    <div class="about-image-small">
-
-                        <img
-                            src="images/produit5.jpeg"
-                            alt="La Roche-Posay Pure Vitamin C12 Serum"
-                        >
-
-                    </div>
-
-                    <div class="about-circle">
-                        ✦
-                    </div>
+                    <img
+                        src="images/produit2.jpeg"
+                        alt="Élégance Beauté"
+                    >
 
                 </div>
 
 
                 <div class="about-content">
 
-                    <p class="section-tag">
-                        NOTRE UNIVERS
-                    </p>
+                    <span>
+                        À propos de nous
+                    </span>
+
 
                     <h2>
-                        Prenez soin de vous
-                        <em>avec élégance.</em>
+
+                        La beauté commence
+
+                        <strong>
+                            par prendre soin de soi.
+                        </strong>
+
                     </h2>
 
-                    <p>
-                        Élégance Beauté vous propose une sélection
-                        de produits dédiés aux soins et à la beauté.
-                    </p>
 
                     <p>
+
+                        Élégance Beauté vous propose une sélection de produits
+                        dédiés au soin et à la beauté.
+
+                    </p>
+
+
+                    <p>
+
                         Notre objectif est de vous permettre de découvrir
-                        facilement vos produits préférés et de commander
-                        directement auprès de nous.
+                        facilement des produits qui correspondent à vos
+                        besoins.
+
                     </p>
 
-                    <div class="about-points">
-
-                        <div>
-
-                            <span>✓</span>
-
-                            <p>
-                                Une sélection soigneusement choisie
-                            </p>
-
-                        </div>
-
-                        <div>
-
-                            <span>✓</span>
-
-                            <p>
-                                Des produits pour différents besoins
-                            </p>
-
-                        </div>
-
-                        <div>
-
-                            <span>✓</span>
-
-                            <p>
-                                Commande simple par WhatsApp
-                            </p>
-
-                        </div>
-
-                    </div>
 
                     <a
-                        href="https://wa.me/22390371793"
-                        target="_blank"
-                        class="button button-primary"
+                        href="#contact"
+                        class="btn-primary"
                     >
+
                         Nous contacter
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
                     </a>
 
                 </div>
@@ -872,60 +1167,49 @@
 
 
 
-        <!-- =========================
-             RECHERCHE PRODUIT
-        ========================== -->
+        <!-- ==================================================
+                           RECHERCHE
+        ================================================== -->
 
         <section
-            class="request-section"
+            class="search-section"
             id="recherche"
         >
 
-            <div class="container">
+            <div class="container search-box">
 
-                <div class="request-card">
+                <div class="search-content">
 
-                    <div class="request-icon">
-                        🔎
-                    </div>
+                    <span>
+                        Vous cherchez quelque chose ?
+                    </span>
 
-                    <div class="request-content">
 
-                        <span class="section-tag">
-                            VOUS CHERCHEZ QUELQUE CHOSE ?
-                        </span>
+                    <h2>
+                        Un produit que vous ne trouvez pas ?
+                    </h2>
 
-                        <h2>
-                            Nous n'avons pas votre produit ?
-                            <em>Nous pouvons peut-être le trouver.</em>
-                        </h2>
 
-                        <p>
-                            Vous recherchez un produit qui n'apparaît
-                            pas dans notre boutique ? Envoyez-nous son
-                            nom ou sa photo sur WhatsApp. Nous vérifierons
-                            si nous pouvons le trouver pour vous.
-                        </p>
+                    <p>
 
-                        <a
-                            href="https://wa.me/22390371793?text=Bonjour%2C%20je%20recherche%20un%20produit%20qui%20n%27est%20pas%20disponible%20sur%20votre%20site.%20Je%20vais%20vous%20envoyer%20son%20nom%20ou%20sa%20photo.%20Pouvez-vous%20v%C3%A9rifier%20si%20vous%20pouvez%20le%20trouver%20%3F"
-                            target="_blank"
-                            class="request-button"
-                        >
+                        Envoyez-nous le nom ou la photo du produit sur
+                        WhatsApp et nous vous répondrons.
 
-                            <span>
-                                📸
-                            </span>
+                    </p>
 
-                            Envoyer le produit
 
-                            <strong>
-                                →
-                            </strong>
+                    <a
+                        href="https://wa.me/22390371793?text=Bonjour%2C%20je%20cherche%20un%20produit%20qui%20n%27est%20pas%20sur%20le%20site."
+                        class="btn-whatsapp"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
 
-                        </a>
+                        <i class="fa-brands fa-whatsapp"></i>
 
-                    </div>
+                        Faire une demande
+
+                    </a>
 
                 </div>
 
@@ -935,9 +1219,9 @@
 
 
 
-        <!-- =========================
-             CONTACT
-        ========================== -->
+        <!-- ==================================================
+                            CONTACT
+        ================================================== -->
 
         <section
             class="contact-section"
@@ -946,58 +1230,70 @@
 
             <div class="container">
 
+
+                <div class="section-heading">
+
+                    <span>
+                        Contact
+                    </span>
+
+
+                    <h2>
+
+                        Parlons de
+
+                        <strong>
+                            votre beauté
+                        </strong>
+
+                    </h2>
+
+
+                    <p>
+                        Une question ? Une commande ? Contactez-nous
+                        directement.
+                    </p>
+
+                </div>
+
+
+
                 <div class="contact-card">
 
-                    <div class="contact-decoration">
-                        ♡
+
+                    <div class="contact-icon">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
                     </div>
 
-                    <div class="contact-content">
 
-                        <p class="section-tag">
-                            UNE QUESTION ?
-                        </p>
+                    <div class="contact-info">
 
-                        <h2>
-                            Parlons de votre
-                            <em>commande.</em>
-                        </h2>
+                        <h3>
+                            WhatsApp
+                        </h3>
+
 
                         <p>
-                            Une question sur un produit ? Une commande ?
-                            Une recherche particulière ? Contactez-nous
-                            directement sur WhatsApp.
+                            +223 90 37 17 93
                         </p>
 
-                        <a
-                            href="https://wa.me/22390371793"
-                            target="_blank"
-                            class="whatsapp-button"
-                        >
-
-                            <span class="whatsapp-icon">
-                                ☏
-                            </span>
-
-                            <span>
-
-                                <small>
-                                    WHATSAPP
-                                </small>
-
-                                <strong>
-                                    +223 90 37 17 93
-                                </strong>
-
-                            </span>
-
-                            <b>
-                                →
-                            </b>
-
-                        </a>
-
                     </div>
+
+
+                    <a
+                        href="https://wa.me/22390371793"
+                        class="contact-button"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                        Écrire sur WhatsApp
+
+                    </a>
 
                 </div>
 
@@ -1005,36 +1301,213 @@
 
         </section>
 
-
     </main>
 
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
+    <!-- ==================================================
+                             PANIER
+    ================================================== -->
+
+    <!-- FOND SOMBRE -->
+
+    <div
+        class="cart-overlay"
+        id="cartOverlay"
+    ></div>
+
+
+
+    <!-- PANNEAU DU PANIER -->
+
+    <aside
+        class="cart-drawer"
+        id="cartDrawer"
+        aria-label="Panier"
+    >
+
+
+        <!-- EN-TÊTE DU PANIER -->
+
+        <div class="cart-header">
+
+
+            <div>
+
+                <span>
+                    Votre sélection
+                </span>
+
+
+                <h2>
+                    Mon panier
+                </h2>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="close-cart"
+                id="closeCart"
+                aria-label="Fermer le panier"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- PRODUITS DU PANIER -->
+
+        <div
+            class="cart-items"
+            id="cartItems"
+        >
+
+            <!-- JavaScript ajoutera les produits ici -->
+
+        </div>
+
+
+
+        <!-- PANIER VIDE -->
+
+        <div
+            class="cart-empty"
+            id="cartEmpty"
+        >
+
+
+            <div class="empty-cart-icon">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+            </div>
+
+
+            <h3>
+                Votre panier est vide
+            </h3>
+
+
+            <p>
+                Ajoutez vos produits préférés pour les retrouver ici.
+            </p>
+
+
+            <button
+                type="button"
+                class="continue-shopping"
+                id="continueShopping"
+            >
+
+                Découvrir les produits
+
+            </button>
+
+        </div>
+
+
+
+        <!-- BAS DU PANIER -->
+
+        <div
+            class="cart-footer"
+            id="cartFooter"
+        >
+
+
+            <div class="cart-total">
+
+                <span>
+                    Total
+                </span>
+
+
+                <strong id="cartTotal">
+                    0 FCFA
+                </strong>
+
+            </div>
+
+
+            <!-- COMMANDER VIA WHATSAPP -->
+
+            <button
+                type="button"
+                class="checkout-whatsapp"
+                id="checkoutWhatsApp"
+            >
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                Commander sur WhatsApp
+
+            </button>
+
+
+            <!-- VIDER LE PANIER -->
+
+            <button
+                type="button"
+                class="clear-cart"
+                id="clearCart"
+            >
+
+                Vider le panier
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ==================================================
+                      WHATSAPP FLOTTANT
+    ================================================== -->
+
+    <a
+        href="https://wa.me/22390371793"
+        class="floating-whatsapp"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contacter Élégance Beauté sur WhatsApp"
+    >
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
+
+
+
+    <!-- ==================================================
+                            FOOTER
+    ================================================== -->
 
     <footer class="footer">
 
-        <div class="container footer-grid">
+        <div class="container footer-content">
 
 
-            <div class="footer-brand">
+            <!-- LOGO FOOTER -->
+
+            <div>
 
                 <a
                     href="#accueil"
-                    class="logo footer-logo"
+                    class="logo"
                 >
 
-                    <span>
-                        Élégance
-                    </span>
-
-                    <strong>
-                        Beauté
-                    </strong>
+                    Élégance <span>Beauté</span>
 
                 </a>
+
 
                 <p>
                     Votre beauté, notre passion.
@@ -1043,11 +1516,10 @@
             </div>
 
 
-            <div class="footer-column">
 
-                <h4>
-                    NAVIGATION
-                </h4>
+            <!-- LIENS -->
+
+            <div class="footer-links">
 
                 <a href="#accueil">
                     Accueil
@@ -1061,10 +1533,6 @@
                     À propos
                 </a>
 
-                <a href="#recherche">
-                    Recherche
-                </a>
-
                 <a href="#contact">
                     Contact
                 </a>
@@ -1072,32 +1540,32 @@
             </div>
 
 
-            <div class="footer-column">
 
-                <h4>
-                    CONTACT
-                </h4>
+            <!-- RÉSEAUX -->
+
+            <div class="footer-social">
 
                 <a
                     href="https://wa.me/22390371793"
                     target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="WhatsApp"
                 >
-                    WhatsApp
-                </a>
 
-                <span>
-                    +223 90 37 17 93
-                </span>
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                </a>
 
             </div>
 
         </div>
 
 
+
         <div class="footer-bottom">
 
             <p>
-                © 2026 Élégance Beauté. Tous droits réservés.
+                © 2026 Élégance Beauté — Tous droits réservés.
             </p>
 
         </div>
@@ -1106,28 +1574,12 @@
 
 
 
-    <!-- =========================
-         BOUTON WHATSAPP FLOTTANT
-    ========================== -->
-
-    <a
-        href="https://wa.me/22390371793"
-        target="_blank"
-        class="whatsapp-floating"
-        aria-label="Contacter Élégance Beauté sur WhatsApp"
-    >
-        <span>
-            ☏
-        </span>
-    </a>
-
-
-
-    <!-- =========================
-         JAVASCRIPT
-    ========================== -->
+    <!-- ==================================================
+                         JAVASCRIPT
+    ================================================== -->
 
     <script src="script.js"></script>
+
 
 </body>
 
