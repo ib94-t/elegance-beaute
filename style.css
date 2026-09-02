@@ -188,14 +188,16 @@ a {
    ========================================================= */
 
 .cart-button {
-    position: relative;
+    position: fixed !important;
+    right: 20px !important;
+    bottom: 90px !important;
+    z-index: 999999 !important;
 
-    display: inline-flex;
+    display: inline-flex !important;
     align-items: center;
     gap: 8px;
 
     padding: 10px 14px;
-
     border-radius: 30px;
 
     background: var(--pink-light);
@@ -242,7 +244,15 @@ a {
     background: var(--white);
     color: var(--pink);
 }
-
+.cart-button {
+    position: fixed !important;
+    right: 20px !important;
+    bottom: 100px !important;
+    z-index: 9999999 !important;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
 
 /* =========================================================
    WHATSAPP
