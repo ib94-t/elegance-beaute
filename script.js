@@ -125,20 +125,33 @@ const products = {
         image: "images/produit6.jpeg"
     },
 
-    8: {
-        id: 8,
-        name: "Anua Niacinamide 10 + TXA 4 Serum",
-        price: 20000,
-        image: "images/produit8.jpeg"
+   8: {
+    id: 8,
+    name: "ACM Azéane – Acide Azélaïque 15%",
+    price: 20000,
+    image: "images/produit8.jpeg"
+},
+
+9: {
+    id: 9,
+    name: "Anua Niacinamide 10 + TXA 4 Serum",
+    price: 15000,
+    image: "images/produit9.jpeg"
+},
+
+    10: {
+        id: 10,
+        name: "345 Relief Cream",
+        price: 10000,
+        image: "images/produit10.jpeg"
     },
 
-    9: {
-        id: 9,
-        name: "ACM Azéane – Acide Azélaïque 15%",
-        price: 15000,
-        image: "images/produit9.jpeg"
+    11: {
+        id: 11,
+        name: "Arencia Vitamin C Booster Shot",
+        price: 10000,
+        image: "images/produit11.jpeg"
     }
-
 };
 
 
