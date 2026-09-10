@@ -184,20 +184,25 @@ a {
 
 
 /* =========================================================
-   BOUTON PANIER HEADER
+   BOUTON PANIER FLOTTANT
    ========================================================= */
 
 .cart-button {
     position: fixed !important;
+
     right: 20px !important;
     bottom: 90px !important;
+
     z-index: 999999 !important;
 
     display: inline-flex !important;
-    align-items: center;
+    align-items: center !important;
+    justify-content: center !important;
+
     gap: 8px;
 
     padding: 10px 14px;
+
     border-radius: 30px;
 
     background: var(--pink-light);
@@ -205,6 +210,9 @@ a {
 
     font-size: 14px;
     font-weight: 600;
+
+    visibility: visible !important;
+    opacity: 1 !important;
 
     transition: var(--transition);
 }
@@ -244,15 +252,7 @@ a {
     background: var(--white);
     color: var(--pink);
 }
-.cart-button {
-    position: fixed !important;
-    right: 20px !important;
-    bottom: 100px !important;
-    z-index: 9999999 !important;
-    display: flex !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-}
+
 
 /* =========================================================
    WHATSAPP
@@ -343,6 +343,7 @@ a {
 
 .hero-content {
     display: grid;
+
     grid-template-columns: 1fr 0.9fr;
 
     align-items: center;
@@ -380,6 +381,7 @@ a {
 
 .hero h1 span {
     display: block;
+
     color: var(--pink);
 }
 
@@ -397,7 +399,9 @@ a {
 
 .hero-buttons {
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 14px;
 }
 
@@ -406,6 +410,7 @@ a {
 
 .btn-primary {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
@@ -490,6 +495,7 @@ a {
 
 .hero-main-image img {
     height: 100%;
+
     object-fit: cover;
 }
 
@@ -503,6 +509,7 @@ a {
     width: 250px;
 
     display: flex;
+
     align-items: center;
 
     gap: 13px;
@@ -569,6 +576,7 @@ a {
 
 .advantage-card {
     display: flex;
+
     align-items: center;
 
     gap: 15px;
@@ -599,6 +607,7 @@ a {
     flex-shrink: 0;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -760,6 +769,7 @@ a {
     height: 38px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -829,7 +839,9 @@ a {
 
 .product-bottom {
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     gap: 10px;
@@ -849,6 +861,7 @@ a {
 
 .add-cart {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
@@ -881,46 +894,11 @@ a {
 .add-cart i {
     font-size: 12px;
 }
-@media (max-width: 768px) {
 
-    .cart-button {
-        position: fixed !important;
 
-        right: 20px !important;
-        bottom: 85px !important;
-
-        padding: 10px 16px !important;
-
-        border-radius: 30px !important;
-
-        display: inline-flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-
-        gap: 7px !important;
-
-        width: auto !important;
-        height: auto !important;
-
-        z-index: 999999 !important;
-    }
-
-    .cart-button > span:not(.cart-count) {
-        display: inline !important;
-    }
-
-    .cart-button i {
-        font-size: 18px;
-    }
-
-    .cart-count {
-        min-width: 22px !important;
-        height: 22px !important;
-        padding: 0 5px !important;
-    }
-}
-
-/* WHATSAPP PRODUIT */
+/* =========================================================
+   WHATSAPP PRODUIT
+   ========================================================= */
 
 .product-whatsapp {
     width: 100%;
@@ -1149,6 +1127,7 @@ a {
     margin: auto;
 
     display: flex;
+
     align-items: center;
 
     gap: 20px;
@@ -1170,6 +1149,7 @@ a {
     flex-shrink: 0;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -1235,6 +1215,7 @@ a {
     background: rgba(35, 20, 27, 0.45);
 
     opacity: 0;
+
     visibility: hidden;
 
     transition: 0.35s ease;
@@ -1246,6 +1227,7 @@ a {
 
 .cart-overlay.active {
     opacity: 1;
+
     visibility: visible;
 }
 
@@ -1266,6 +1248,7 @@ a {
     height: 100vh;
 
     display: flex;
+
     flex-direction: column;
 
     background: var(--white);
@@ -1274,7 +1257,13 @@ a {
 
     transform: translateX(105%);
 
-    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    transition:
+        transform 0.4s cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        );
 }
 
 
@@ -1289,7 +1278,9 @@ a {
 
 .cart-header {
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     gap: 20px;
@@ -1335,6 +1326,7 @@ a {
     flex-shrink: 0;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -1449,7 +1441,9 @@ a {
 
 .cart-item-controls {
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     gap: 10px;
@@ -1458,6 +1452,7 @@ a {
 
 .quantity-controls {
     display: flex;
+
     align-items: center;
 
     border: 1px solid var(--border);
@@ -1473,6 +1468,7 @@ a {
     height: 29px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -1503,6 +1499,7 @@ a {
 
 .remove-item {
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -1558,6 +1555,7 @@ a {
     height: 75px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -1640,7 +1638,9 @@ a {
 
 .cart-total {
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     margin-bottom: 15px;
@@ -1667,6 +1667,7 @@ a {
     width: 100%;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -1741,6 +1742,7 @@ a {
     height: 58px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -1838,6 +1840,7 @@ a {
     height: 43px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -1886,11 +1889,13 @@ a {
 
     from {
         opacity: 0;
+
         transform: translateY(25px);
     }
 
     to {
         opacity: 1;
+
         transform: translateY(0);
     }
 
@@ -1973,6 +1978,7 @@ a {
         display: none;
 
         flex-direction: column;
+
         align-items: stretch;
 
         gap: 5px;
@@ -2013,12 +2019,47 @@ a {
     }
 
 
+    /* PANIER MOBILE */
+
     .cart-button {
-        width: 100%;
+        position: fixed !important;
 
-        justify-content: center;
+        right: 20px !important;
+        bottom: 85px !important;
 
-        padding: 12px;
+        width: auto !important;
+        height: auto !important;
+
+        padding: 10px 16px !important;
+
+        display: inline-flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 7px !important;
+
+        border-radius: 30px !important;
+
+        z-index: 999999 !important;
+    }
+
+
+    .cart-button > span:not(.cart-count) {
+        display: inline !important;
+    }
+
+
+    .cart-button i {
+        font-size: 18px;
+    }
+
+
+    .cart-count {
+        min-width: 22px !important;
+        height: 22px !important;
+
+        padding: 0 5px !important;
     }
 
 
@@ -2045,6 +2086,7 @@ a {
 
     .hero-text p {
         margin-left: auto;
+
         margin-right: auto;
     }
 
@@ -2067,6 +2109,7 @@ a {
 
     .hero-main-image {
         width: 75%;
+
         height: 400px;
     }
 
@@ -2131,6 +2174,7 @@ a {
 
     .footer-social {
         display: flex;
+
         justify-content: center;
     }
 
@@ -2180,6 +2224,7 @@ a {
 
     .hero-main-image {
         width: 82%;
+
         height: 350px;
     }
 

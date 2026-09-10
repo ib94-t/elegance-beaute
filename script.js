@@ -18,15 +18,19 @@ if (menuToggle && nav) {
 
         const icon = menuToggle.querySelector("i");
 
-        if (nav.classList.contains("active")) {
+        if (icon) {
 
-            icon.classList.remove("fa-bars");
-            icon.classList.add("fa-xmark");
+            if (nav.classList.contains("active")) {
 
-        } else {
+                icon.classList.remove("fa-bars");
+                icon.classList.add("fa-xmark");
 
-            icon.classList.remove("fa-xmark");
-            icon.classList.add("fa-bars");
+            } else {
+
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
+
+            }
 
         }
 
@@ -43,8 +47,12 @@ if (menuToggle && nav) {
 
             const icon = menuToggle.querySelector("i");
 
-            icon.classList.remove("fa-xmark");
-            icon.classList.add("fa-bars");
+            if (icon) {
+
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
+
+            }
 
         });
 
@@ -83,6 +91,10 @@ const continueShoppingButton =
 
 const products = {
 
+    /* =========================
+       PRODUITS 01 À 06
+       ========================= */
+
     1: {
         id: 1,
         name: "Medicube Collagen Night Wrapping Mask",
@@ -107,14 +119,14 @@ const products = {
     4: {
         id: 4,
         name: "Medix Vitamin C + Turmeric Brighten + Firm Body Cream",
-        price: 20000,
+        price: 15000,
         image: "images/produit4.jpeg"
     },
 
     5: {
         id: 5,
         name: "La Roche-Posay Pure Vitamin C12 Serum",
-        price: 25000,
+        price: 17000,
         image: "images/produit5.jpeg"
     },
 
@@ -125,19 +137,29 @@ const products = {
         image: "images/produit6.jpeg"
     },
 
-   8: {
-    id: 8,
-    name: "ACM Azéane – Acide Azélaïque 15%",
-    price: 20000,
-    image: "images/produit8.jpeg"
-},
 
-9: {
-    id: 9,
-    name: "Anua Niacinamide 10 + TXA 4 Serum",
-    price: 15000,
-    image: "images/produit9.jpeg"
-},
+    /* =========================
+       PRODUITS 07 ET 08
+       ========================= */
+
+    9: {
+        id: 9,
+        name: "Anua Niacinamide 10 + TXA 4 Serum",
+        price: 13000,
+        image: "images/produit9.jpeg"
+    },
+
+    8: {
+        id: 8,
+        name: "ACM Azéane – Acide Azélaïque 15%",
+        price: 15000,
+        image: "images/produit8.jpeg"
+    },
+
+
+    /* =========================
+       PRODUITS 09 À 11
+       ========================= */
 
     10: {
         id: 10,
@@ -151,7 +173,76 @@ const products = {
         name: "Arencia Vitamin C Booster Shot",
         price: 10000,
         image: "images/produit11.jpeg"
+    },
+
+
+    /* =========================
+       NOUVEAUX PRODUITS 12 À 20
+       ========================= */
+
+    12: {
+        id: 12,
+        name: "La Roche-Posay Lipikar AP+M",
+        price: 13000,
+        image: "images/produit12.jpeg"
+    },
+
+    13: {
+        id: 13,
+        name: "Nohooh Lait Éclaircissant 500ml",
+        price: 13000,
+        image: "images/produit13.jpeg"
+    },
+
+    14: {
+        id: 14,
+        name: "Topicrem MELA 500ml",
+        price: 20000,
+        image: "images/produit14.jpeg"
+    },
+
+    15: {
+        id: 15,
+        name: "The Elf Nano White Gel",
+        price: 13000,
+        image: "images/produit15.jpeg"
+    },
+
+    16: {
+        id: 16,
+        name: "Françoise Bedon Gel de Douche 500ml",
+        price: 18000,
+        image: "images/produit16.jpeg"
+    },
+
+    17: {
+        id: 17,
+        name: "Eucerin Crème Solaire SPF 50+",
+        price: 10000,
+        image: "images/produit17.jpeg"
+    },
+
+    18: {
+        id: 18,
+        name: "CeraVe Gel Moussant 236ml",
+        price: 10000,
+        image: "images/produit18.jpeg"
+    },
+
+    19: {
+        id: 19,
+        name: "Advanced Korean Skin 280ml",
+        price: 13000,
+        image: "images/produit19.jpeg"
+    },
+
+    20: {
+        id: 20,
+        name: "Mooyam 12H",
+        price: 7000,
+        image: "images/produit20.jpeg"
     }
+
 };
 
 
@@ -163,23 +254,41 @@ let cart = [];
 
 try {
 
-    const savedCart = localStorage.getItem("eleganceBeauteCart");
+    const savedCart =
+        localStorage.getItem("eleganceBeauteCart");
 
     if (savedCart) {
+
         cart = JSON.parse(savedCart);
+
     }
 
     if (!Array.isArray(cart)) {
+
         cart = [];
+
     }
 
 } catch (error) {
 
-    console.log("Impossible de charger le panier.");
+    console.log(
+        "Impossible de charger le panier."
+    );
 
     cart = [];
 
 }
+
+
+/* =========================================================
+   NETTOYER LES ANCIENS PRODUITS INVALIDES
+   ========================================================= */
+
+cart = cart.filter(item => {
+
+    return products[item.id];
+
+});
 
 
 /* =========================================================
@@ -197,7 +306,9 @@ function saveCart() {
 
     } catch (error) {
 
-        console.log("Impossible de sauvegarder le panier.");
+        console.log(
+            "Impossible de sauvegarder le panier."
+        );
 
     }
 
@@ -210,7 +321,8 @@ function saveCart() {
 
 function formatPrice(price) {
 
-    return new Intl.NumberFormat("fr-FR").format(price) + " FCFA";
+    return new Intl.NumberFormat("fr-FR")
+        .format(price) + " FCFA";
 
 }
 
@@ -222,7 +334,9 @@ function formatPrice(price) {
 function openCart() {
 
     if (!cartDrawer || !cartOverlay) {
+
         return;
+
     }
 
     cartDrawer.classList.add("active");
@@ -240,7 +354,9 @@ function openCart() {
 function closeCart() {
 
     if (!cartDrawer || !cartOverlay) {
+
         return;
+
     }
 
     cartDrawer.classList.remove("active");
@@ -257,43 +373,55 @@ function closeCart() {
 
 if (openCartButton) {
 
-    openCartButton.addEventListener("click", openCart);
+    openCartButton.addEventListener(
+        "click",
+        openCart
+    );
 
 }
 
 
 if (closeCartButton) {
 
-    closeCartButton.addEventListener("click", closeCart);
+    closeCartButton.addEventListener(
+        "click",
+        closeCart
+    );
 
 }
 
 
 if (cartOverlay) {
 
-    cartOverlay.addEventListener("click", closeCart);
+    cartOverlay.addEventListener(
+        "click",
+        closeCart
+    );
 
 }
 
 
 if (continueShoppingButton) {
 
-    continueShoppingButton.addEventListener("click", () => {
+    continueShoppingButton.addEventListener(
+        "click",
+        () => {
 
-        closeCart();
+            closeCart();
 
-        const productsSection =
-            document.getElementById("produits");
+            const productsSection =
+                document.getElementById("produits");
 
-        if (productsSection) {
+            if (productsSection) {
 
-            productsSection.scrollIntoView({
-                behavior: "smooth"
-            });
+                productsSection.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            }
 
         }
-
-    });
+    );
 
 }
 
@@ -307,7 +435,14 @@ function addToCart(productId) {
     const product = products[productId];
 
     if (!product) {
+
+        console.error(
+            "Produit introuvable :",
+            productId
+        );
+
         return;
+
     }
 
 
@@ -345,20 +480,22 @@ function addToCart(productId) {
 
 
 /* =========================================================
-   BOUTONS "AJOUTER"
+   BOUTONS "AJOUTER AU PANIER"
    ========================================================= */
 
 document.querySelectorAll(".add-cart").forEach(button => {
 
-    button.addEventListener("click", () => {
+    button.addEventListener(
+        "click",
+        () => {
 
-        const productId = Number(
-            button.dataset.id
-        );
+            const productId =
+                Number(button.dataset.id);
 
-        addToCart(productId);
+            addToCart(productId);
 
-    });
+        }
+    );
 
 });
 
@@ -374,7 +511,9 @@ function changeQuantity(productId, change) {
     );
 
     if (!item) {
+
         return;
+
     }
 
 
@@ -421,7 +560,9 @@ function removeFromCart(productId) {
 function clearCart() {
 
     if (cart.length === 0) {
+
         return;
+
     }
 
 
@@ -431,7 +572,9 @@ function clearCart() {
 
 
     if (!confirmation) {
+
         return;
+
     }
 
 
@@ -465,7 +608,8 @@ if (clearCartButton) {
 function getCartItemCount() {
 
     return cart.reduce(
-        (total, item) => total + item.quantity,
+        (total, item) =>
+            total + item.quantity,
         0
     );
 
@@ -498,7 +642,9 @@ function getCartTotal() {
 function renderCart() {
 
     if (!cartItemsContainer) {
+
         return;
+
     }
 
 
@@ -507,7 +653,8 @@ function renderCart() {
 
     cart.forEach(item => {
 
-        const cartItem = document.createElement("div");
+        const cartItem =
+            document.createElement("div");
 
         cartItem.className = "cart-item";
 
@@ -549,7 +696,9 @@ function renderCart() {
                             data-id="${item.id}"
                             aria-label="Diminuer la quantité"
                         >
+
                             <i class="fa-solid fa-minus"></i>
+
                         </button>
 
 
@@ -566,7 +715,9 @@ function renderCart() {
                             data-id="${item.id}"
                             aria-label="Augmenter la quantité"
                         >
+
                             <i class="fa-solid fa-plus"></i>
+
                         </button>
 
                     </div>
@@ -591,12 +742,16 @@ function renderCart() {
         `;
 
 
-        cartItemsContainer.appendChild(cartItem);
+        cartItemsContainer.appendChild(
+            cartItem
+        );
 
     });
 
 
-    /* Boutons - */
+    /* =====================================================
+       BOUTONS -
+       ===================================================== */
 
     cartItemsContainer
         .querySelectorAll(".decrease")
@@ -617,7 +772,9 @@ function renderCart() {
         });
 
 
-    /* Boutons + */
+    /* =====================================================
+       BOUTONS +
+       ===================================================== */
 
     cartItemsContainer
         .querySelectorAll(".increase")
@@ -638,7 +795,9 @@ function renderCart() {
         });
 
 
-    /* Boutons supprimer */
+    /* =====================================================
+       BOUTONS SUPPRIMER
+       ===================================================== */
 
     cartItemsContainer
         .querySelectorAll(".remove-item")
@@ -666,15 +825,19 @@ function renderCart() {
 
 function updateCart() {
 
-    const itemCount = getCartItemCount();
-    const total = getCartTotal();
+    const itemCount =
+        getCartItemCount();
+
+    const total =
+        getCartTotal();
 
 
     /* COMPTEUR */
 
     if (cartCount) {
 
-        cartCount.textContent = itemCount;
+        cartCount.textContent =
+            itemCount;
 
     }
 
@@ -689,39 +852,62 @@ function updateCart() {
     }
 
 
-    /* PRODUITS */
+    /* AFFICHER LES PRODUITS */
 
     renderCart();
 
 
-    /* PANIER VIDE / NON VIDE */
+    /* =====================================================
+       PANIER VIDE
+       ===================================================== */
 
     if (cart.length === 0) {
 
         if (cartEmpty) {
+
             cartEmpty.classList.add("active");
+
         }
 
         if (cartFooter) {
+
             cartFooter.classList.remove("active");
+
         }
 
         if (cartItemsContainer) {
-            cartItemsContainer.style.display = "none";
+
+            cartItemsContainer.style.display =
+                "none";
+
         }
 
-    } else {
+    }
+
+
+    /* =====================================================
+       PANIER NON VIDE
+       ===================================================== */
+
+    else {
 
         if (cartEmpty) {
+
             cartEmpty.classList.remove("active");
+
         }
 
         if (cartFooter) {
+
             cartFooter.classList.add("active");
+
         }
 
         if (cartItemsContainer) {
-            cartItemsContainer.style.display = "block";
+
+            cartItemsContainer.style.display =
+                "block";
+
         }
 
     }
@@ -747,7 +933,7 @@ function checkoutWhatsAppOrder() {
 
 
     let message =
-        "Bonjour, je souhaite commander les produits suivants :%0A%0A";
+        "Bonjour, je souhaite commander les produits suivants :\n\n";
 
 
     cart.forEach(item => {
@@ -763,19 +949,20 @@ function checkoutWhatsAppOrder() {
             item.quantity +
             " — " +
             formatPrice(subtotal) +
-            "%0A";
+            "\n";
 
     });
 
 
-    const total = getCartTotal();
+    const total =
+        getCartTotal();
 
 
     message +=
-        "%0A" +
+        "\n" +
         "Total : " +
         formatPrice(total) +
-        "%0A%0A";
+        "\n\n";
 
 
     message +=
@@ -790,7 +977,7 @@ function checkoutWhatsAppOrder() {
         "https://wa.me/" +
         whatsappNumber +
         "?text=" +
-        message;
+        encodeURIComponent(message);
 
 
     window.open(
@@ -802,7 +989,7 @@ function checkoutWhatsAppOrder() {
 
 
 /* =========================================================
-   BOUTON CHECKOUT
+   BOUTON CHECKOUT WHATSAPP
    ========================================================= */
 
 if (checkoutWhatsApp) {
@@ -816,7 +1003,7 @@ if (checkoutWhatsApp) {
 
 
 /* =========================================================
-   FERMER PANIER AVEC ESC
+   FERMER LE PANIER AVEC ESC
    ========================================================= */
 
 document.addEventListener(
@@ -853,16 +1040,22 @@ document.querySelectorAll(
                 !targetId ||
                 targetId === "#"
             ) {
+
                 return;
+
             }
 
 
             const target =
-                document.querySelector(targetId);
+                document.querySelector(
+                    targetId
+                );
 
 
             if (!target) {
+
                 return;
+
             }
 
 
@@ -870,8 +1063,10 @@ document.querySelectorAll(
 
 
             target.scrollIntoView({
+
                 behavior: "smooth",
                 block: "start"
+
             });
 
         }
@@ -898,9 +1093,13 @@ if ("IntersectionObserver" in window) {
 
                 entries.forEach(entry => {
 
-                    if (entry.isIntersecting) {
+                    if (
+                        entry.isIntersecting
+                    ) {
 
-                        entry.target.style.opacity = "1";
+                        entry.target.style.opacity =
+                            "1";
+
                         entry.target.style.transform =
                             "translateY(0)";
 
@@ -919,18 +1118,24 @@ if ("IntersectionObserver" in window) {
         );
 
 
-    animatedElements.forEach(element => {
+    animatedElements.forEach(
+        element => {
 
-        element.style.opacity = "0";
-        element.style.transform =
-            "translateY(25px)";
+            element.style.opacity =
+                "0";
 
-        element.style.transition =
-            "opacity 0.7s ease, transform 0.7s ease";
+            element.style.transform =
+                "translateY(25px)";
 
-        observer.observe(element);
+            element.style.transition =
+                "opacity 0.7s ease, transform 0.7s ease";
 
-    });
+            observer.observe(
+                element
+            );
+
+        }
+    );
 
 }
 
@@ -940,13 +1145,17 @@ if ("IntersectionObserver" in window) {
    ========================================================= */
 
 const header =
-    document.querySelector(".header");
+    document.querySelector(
+        ".header"
+    );
 
 
 function updateHeader() {
 
     if (!header) {
+
         return;
+
     }
 
 
@@ -977,6 +1186,8 @@ updateHeader();
 /* =========================================================
    INITIALISATION
    ========================================================= */
+
+saveCart();
 
 updateCart();
 
